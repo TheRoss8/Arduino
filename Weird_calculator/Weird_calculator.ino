@@ -1,10 +1,25 @@
+/*
+ * This sketch is a calculator which uses a potentiometer to select the digits on a 7-seg 
+ * matrix and a button to confirm them.
+ * Then in the same way you select the operand and you'll get the result on the matrix.
+ * Weird!
+ */
+
 #include <SevSeg.h>
 SevSeg disp;
 
+/*
+ * Pin A5 for the potentiometer
+ * Pin 13 for the button
+ */
 const byte IN = A5, BUTTON = 13;
 int oper, f1 = 0, f2 = 0, i = 0;
 
 void setup() {
+
+  /*
+   * Setting up the matrix
+   */
   const byte DIGITS = 4;
   const byte DIGPIN[] = {1, 2, 3, 4};
   const byte SEG[] = {6, 7, 8, 9, 10, 11, 12, 13};
