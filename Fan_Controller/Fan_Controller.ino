@@ -55,7 +55,7 @@ void loop() {
         lcd.print(t);
         cnt++;
       }
-      if(millis() - prev >= 60000){
+      if(millis() - prev >= 60000 || minutes == 0){
         prev = millis();
         minutes--;
         lcd.noBacklight();
